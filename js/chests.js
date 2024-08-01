@@ -321,7 +321,7 @@
 				is_opened: false,
 				is_available: always
 			}, { // [2]
-				caption: 'Stoops Lonk\'s Hoose',
+				caption: 'Link\'s House',
 				is_opened: (flags.gametype === 'S'),
 				is_available: always
 			}, { // [3]
@@ -394,7 +394,7 @@
 				is_opened: false,
 				is_available: always
 			}, { // [15]
-				caption: 'Thieve\'s Hut (4 + {bomb})',
+				caption: 'Thieves\' Hut (4 + {bomb})',
 				is_opened: false,
 				is_available: always
 			}, { // [16]
@@ -418,7 +418,7 @@
 					return items.boots ? 'available' : 'unavailable';
 				}
 			}, { // [19]
-				caption: 'Minimoldorm Cave (NPC + 4) {bomb}',
+				caption: 'Mini-moldorm Cave (NPC + 4) {bomb}',
 				is_opened: false,
 				is_available: always
 			}, { // [20]
@@ -709,25 +709,25 @@
 					return 'unavailable';
 				}
 			}, { // [67]
-				caption: 'Ol\' Stumpy',
+				caption: 'Stumpy',
 				is_opened: false,
 				is_available: function() {
 					return (items.moonpearl || glitchLinkState()) && canReachSDW() ? 'available' : 'unavailable';
 				}
 			}, { // [68]
-				caption: 'Lazy Drunk Kid: Distract him with {bottle} because he can\'t lay off the sauce!',
+				caption: 'Sick Kid {bottle}',
 				is_opened: false,
 				is_available: function() {
 					return items.bottle ? 'available' : 'unavailable';
 				}
 			}, { // [69]
-				caption: 'Gary\'s Lunchbox (save the frog first)',
+				caption: 'Purple Chest (save the frog first)',
 				is_opened: false,
 				is_available: function() {
 					return canReachNWDW() && (items.moonpearl || glitchLinkState()) && (items.glove === 2 || (flags.glitches === 'M' && items.bottle)) ? 'available' : 'unavailable';
 				}
 			}, { // [70]
-				caption: 'Fugitive under the bridge {flippers}',
+				caption: 'Hobo {flippers}',
 				is_opened: false,
 				is_available: always
 			}, { // [71]
@@ -810,7 +810,7 @@
 					return items.glove && (items.boots || flags.glitches === 'M' || (canReachMireArea() && items.mirror)) ? 'available' : 'unavailable';
 				}
 			}, { // [83]
-				caption: '{hammer}{hammer}{hammer}{hammer}{hammer}{hammer}{hammer}{hammer}!!!!!!!!',
+				caption: 'Hammer Pegs {hammer}',
 				is_opened: false,
 				is_available: function() {
 					return (items.moonpearl || glitchLinkState()) && (items.glove === 2 || items.boots || flags.glitches === 'M') && items.hammer ? 'available' : 'unavailable';
@@ -876,7 +876,7 @@
 					return canReachNEDW() ? 'available' : 'unavailable';
 				}
 			}, { // [93]
-				caption: 'Alec Baldwin\'s Dig-a-Thon: Pay 80 rupees',
+				caption: 'Dig Game: Pay 80 rupees',
 				is_opened: false,
 				is_available: function() {
 					return canReachSDW() && (items.moonpearl || glitchLinkState()) ? 'available' : 'unavailable';
@@ -1149,7 +1149,7 @@
 				is_opened: false,
 				is_available: always
 			}, { // [2]
-				caption: 'Stoops Lonk\'s Hoose',
+				caption: 'Link\'s House',
 				is_opened: false,
 				is_available: always
 			}, { // [3]
@@ -1437,19 +1437,19 @@
 				is_opened: false,
 				is_available: always
 			}, { // [67]
-				caption: 'Ol\' Stumpy',
+				caption: 'Stumpy',
 				is_opened: false,
 				is_available: always
 			}, { // [68]
-				caption: 'Lazy Drunk Kid: Distract him with {bottle} because he can\'t lay off the sauce!',
+				caption: 'Sick Kid {bottle}',
 				is_opened: false,
 				is_available: always
 			}, { // [69]
-				caption: 'Gary\'s Lunchbox (save the frog first)',
+				caption: 'Purple Chest (save the frog first)',
 				is_opened: false,
 				is_available: always
 			}, { // [70]
-				caption: 'Fugitive under the bridge {flippers}',
+				caption: 'Hobo {flippers}',
 				is_opened: false,
 				is_available: always
 			}, { // [71]
@@ -1501,7 +1501,7 @@
 				is_opened: false,
 				is_available: always
 			}, { // [83]
-				caption: '{hammer}{hammer}{hammer}{hammer}{hammer}{hammer}{hammer}{hammer}!!!!!!!!',
+				caption: 'Hammer Pegs {hammer}',
 				is_opened: false,
 				is_available: always
 			}, { // [84]
@@ -1541,7 +1541,7 @@
 				is_opened: false,
 				is_available: always
 			}, { // [93]
-				caption: 'Alec Baldwin\'s Dig-a-Thon: Pay 80 rupees',
+				caption: 'Dig Game: Pay 80 rupees',
 				is_opened: false,
 				is_available: always
 			}, { // [94]
@@ -2007,7 +2007,7 @@
 					return canReachLightWorldBunny() ? (items.moonpearl ? 'available' : 'unavailable') : 'unavailable';
 				}
 			}, { // [2]
-				caption: 'Stoops Lonk\'s Hoose',
+				caption: 'Link\'s House',
 				is_opened: false,
 				is_available: always
 			}, { // [3]
@@ -2414,23 +2414,23 @@
 					return 'unavailable';
 				}
 			}, { // [67]
-				caption: 'Ol\' Stumpy',
+				caption: 'Stumpy',
 				is_opened: false,
 				is_available: always
 			}, { // [68]
-				caption: 'Lazy Drunk Kid: Distract him with {bottle} because he can\'t lay off the sauce!',
+				caption: 'Sick Kid {bottle}',
 				is_opened: false,
 				is_available: function() {
 					return canReachLightWorldBunny() && items.bottle ? 'available' : 'unavailable';
 				}
 			}, { // [69]
-				caption: 'Gary\'s Lunchbox (save the frog first)',
+				caption: 'Purple Chest (save the frog first)',
 				is_opened: false,
 				is_available: function() {
 					return (items.mirror || (items.glove === 2 && activeFlute()) || (items.glove === 2 && (items.moonpearl || items.agahnim))) && canReachLightWorldBunny() ? 'available' : 'unavailable';
 				}
 			}, { // [70]
-				caption: 'Fugitive under the bridge {flippers}',
+				caption: 'Hobo {flippers}',
 				is_opened: false,
 				is_available: function() {
 					return canReachLightWorld() ? (items.flippers ? 'available' : 'unavailable') : 'unavailable';
@@ -2516,7 +2516,7 @@
 					return canReachLightWorld() && items.glove ? 'available' : 'unavailable';
 				}
 			}, { // [83]
-				caption: '{hammer}{hammer}{hammer}{hammer}{hammer}{hammer}{hammer}{hammer}!!!!!!!!',
+				caption: 'Hammer Pegs {hammer}',
 				is_opened: false,
 				is_available: function() {
 					return items.hammer && (items.glove === 2 || (items.mirror && canReachLightWorldBunny())) ? 'available' : 'unavailable';
@@ -2594,7 +2594,7 @@
 					return 'unavailable';
 				}
 			}, { // [93]
-				caption: 'Alec Baldwin\'s Dig-a-Thon: Pay 80 rupees',
+				caption: 'Dig Game: Pay 80 rupees',
 				is_opened: false,
 				is_available: always
 			}, { // [94]
@@ -3160,7 +3160,7 @@
 				is_opened: false,
 				is_available: always
 			}, { // [2]
-				caption: 'Stoops Lonk\'s Hoose',
+				caption: 'Link\'s House',
 				is_opened: (flags.gametype === 'S'),
 				is_available: always
 			}, { // [3]
@@ -3573,25 +3573,25 @@
 					return 'unavailable';
 				}
 			}, { // [67]
-				caption: 'Ol\' Stumpy',
+				caption: 'Stumpy',
 				is_opened: false,
 				is_available: function() {
 					return can_reach_outcast() || items.agahnim && items.moonpearl && items.hammer ? 'available' : 'unavailable';
 				}
 			}, { // [68]
-				caption: 'Lazy Drunk Kid: Distract him with {bottle} because he can\'t lay off the sauce!',
+				caption: 'Sick Kid {bottle}',
 				is_opened: false,
 				is_available: function() {
 					return items.bottle ? 'available' : 'unavailable';
 				}
 			}, { // [69]
-				caption: 'Gary\'s Lunchbox (save the frog first)',
+				caption: 'Purple Chest (save the frog first)',
 				is_opened: false,
 				is_available: function() {
 					return items.moonpearl && items.glove === 2 ? 'available' : 'unavailable';
 				}
 			}, { // [70]
-				caption: 'Fugitive under the bridge {flippers}',
+				caption: 'Hobo {flippers}',
 				is_opened: false,
 				is_available: function() {
 					return items.flippers ? 'available' : 'unavailable';
@@ -3678,7 +3678,7 @@
 					return items.flute >= 1 && items.glove === 2 && items.mirror ? 'available' : 'unavailable';
 				}
 			}, { // [83]
-				caption: '{hammer}{hammer}{hammer}{hammer}{hammer}{hammer}{hammer}{hammer}!!!!!!!!',
+				caption: 'Hammer Pegs {hammer}',
 				is_opened: false,
 				is_available: function() {
 					return items.moonpearl && items.glove === 2 && items.hammer ? 'available' : 'unavailable';
@@ -3760,7 +3760,7 @@
 						items.glove === 2 && items.moonpearl && items.flippers ? 'available' : 'unavailable';
 				}
 			}, { // [93]
-				caption: 'Alec Baldwin\'s Dig-a-Thon: Pay 80 rupees',
+				caption: 'Dig Game: Pay 80 rupees',
 				is_opened: false,
 				is_available: function() {
 					return can_reach_outcast() || items.agahnim && items.moonpearl && items.hammer ? 'available' : 'unavailable';
