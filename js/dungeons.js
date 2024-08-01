@@ -288,8 +288,8 @@
 		}
 		
 		if (achests > 0) return 'available';
+		if (pchests > 0) return 'available';
 		if (dachests > 0) return 'darkavailable';
-		if (pchests > 0) return 'possible';
 		if (dpchests > 0) return 'darkpossible';
 		return 'unavailable';
 	}
