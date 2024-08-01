@@ -3,7 +3,7 @@ body {
   margin: 0px;
   background-color: black;
   font-family: roboto_condensedregular, Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 22px;
   overflow: hidden;
 }
 
@@ -23,7 +23,7 @@ body {
 #tracker .item,
 #tracker .boss,
 #tracker [id^="item"] { width: 64px; height: 64px; }
-#tracker [id^="chest"] { width: 32px; height: 32px; font-size: 15px; text-align: center; font-family: roboto_condensedregular, "Arial Black", Gadget, sans-serif; font-weight: bold; padding-top: 6px; -moz-user-select: -moz-none; -khtml-user-select: none; -webkit-user-select: none; -o-user-select: none; user-select: none; }
+#tracker [id^="chest"] { width: 32px; height: 32px; position:absolute; bottom: 0, left: 0 font-size: 44px; text-align: center; font-family: roboto_condensedregular, "Arial Black", Gadget, sans-serif; font-weight: bold; padding-top: 0px; -moz-user-select: -moz-none; -khtml-user-select: none; -webkit-user-select: none; -o-user-select: none; user-select: none; }
 #tracker [id^="bigkey"] { width: 32px; height: 32px; }
 #tracker [id^="smallkey"] { width: 64px; height: 32px; color: #FFF; font-size: 20px; text-align: center; font-family: "Arial Black", Gadget, sans-serif; padding-top: 0px; padding-left: 32px; -moz-user-select: -moz-none; -khtml-user-select: none; -webkit-user-select: none; -o-user-select: none; user-select: none;  }
 #tracker [id^="smallkeyhalf"] { width: 32px; height: 32px; color: #FFF; font-size: 20px; text-align: center; font-family: "Arial Black", Gadget, sans-serif; padding-top: 6px; padding-left: 6px; -moz-user-select: -moz-none; -khtml-user-select: none; -webkit-user-select: none; -o-user-select: none; user-select: none;  }
@@ -73,6 +73,7 @@ body {
 #tracker .sphere { height: 37px; width: 37px; background-size:100%; }
 #bigkeyhalf0 { top: 11px; }
 #bigkeyhalf1 { top: 59px; }
+#tracker .spacer { height: 64px; width: 64px;}
 
 #tracker .prize-1 { background-size: 90%; background-repeat: no-repeat; background-position: center;}
 #tracker .prize-2 { background-size: 90%; background-repeat: no-repeat; background-position: center;}
@@ -159,8 +160,8 @@ body {
 }
 
 .lowerchest {
-  width: 64px;
-  height: 64px;
+  width: 0px;
+  height: 0px;
   float: left;
 }
 
@@ -226,8 +227,8 @@ body {
 .castle.findhighlight,
 .location.findhighlight,
 .dungeon.findhighlight { border-color:rgb(255, 238, 0) !important; border-width: 3px !important; }
-.chest.large { width: 64px !important; height: 64px !important; background-size: 100%; font-size: 34px !important; padding-top: 8px !important; background-image: url(../images/dungeons/keychestlarge.png); }
-.chest-0.large { width: 64px !important; height: 64px !important; background-size: 100%; font-size: 34px !important; padding-top: 8px !important; background-image: url(../images/dungeons/keychestlarge0.png); }
+//.chest.large { width: 64px !important; height: 64px !important; background-size: 100%; font-size: 34px !important; padding-top: 8px !important; background-image: url(../images/dungeons/keychestlarge.png); }
+//.chest-0.large { width: 64px !important; height: 64px !important; background-size: 100%; font-size: 34px !important; padding-top: 8px !important; background-image: url(../images/dungeons/keychestlarge0.png); }
 .location.rightclick,
 .dungeon.rightclick { background-image: url(../images/overlay/highlighted2.png); }
 .hidden { width: 0px!important; height: 0px!important; }
@@ -410,12 +411,12 @@ div[class*=" bottle"].active-7 { background-image: url(../images/items/bottle_go
 .prize-3 { background-image: url(../images/dungeons/prize3.png); }
 .prize-4 { background-image: url(../images/dungeons/prize4.png); }
 .prize-5 { background-image: url(../images/dungeons/prize5.png); }
-.medallion-0 { background-image: url(../images/dungeons/medallion0.png); }
-.medallion-1 { background-image: url(../images/dungeons/medallion1.png); }
-.medallion-2 { background-image: url(../images/dungeons/medallion2.png); }
-.medallion-3 { background-image: url(../images/dungeons/medallion3.png); }
-.chest-0 { background-image: url(../images/dungeons/keychest0.png); }
-.chest { background-image: url(../images/dungeons/keychest.png); }
+.medallion-0 { background-image: url(../images/dungeons/medallion0.png); top:0; right:0; }
+.medallion-1 { background-image: url(../images/dungeons/medallion1.png); top:0; right:0; }
+.medallion-2 { background-image: url(../images/dungeons/medallion2.png); top:0; right:0; }
+.medallion-3 { background-image: url(../images/dungeons/medallion3.png); top:0; right:0; }
+.chest-0 { background-image: url(../images/dungeons/keychest0.png); bottom: 0; left: 0;}
+.chest { background-image: url(../images/dungeons/keychest.png); bottom: 0; left: 0; }
 .bigkey { background-image: url(../images/dungeons/bigkey.png); }
 .smallkeyfull { background-image: url(../images/dungeons/smallkeyfull.png); }
 .smallkeyhalf { background-image: url(../images/dungeons/smallkeyhalf.png); }
