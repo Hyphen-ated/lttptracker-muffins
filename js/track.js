@@ -1436,16 +1436,33 @@
 				break;
 		}
 	};
-	
+
+    const prizeOrder = [3, 4, 1, 2]
+    window.changePrize = function(n, i) {
+        var currentPrize = prizes[n]
+        var idx = prizeOrder.indexOf(currentPrize)
+        idx += i;
+        if (idx === prizeOrder.length) {
+            idx = 0;
+        }
+        if (idx === -1) {
+            idx = prizeOrder.length - 1;
+        }
+        var newPrize = prizeOrder[idx];
+        prizes[n] = newPrize;
+
+        document.getElementById('dungeonPrize'+n).className = 'prize-' + newPrize;
+
+        updateMapTracker();
+    };
+
     // event of clicking on a boss's pendant/crystal subsquare
     window.toggle_dungeon = function(n) {
-		var maxdungeon = (flags.wildmaps ? 6 : 5);
-		document.getElementById('dungeonPrize'+n).classList.remove('prize-' + prizes[n]);
-        prizes[n] += 1;
-        if (prizes[n] === maxdungeon) prizes[n] = 0;
-        document.getElementById('dungeonPrize'+n).classList.add('prize-' + prizes[n]);
+        changePrize(n, 1)
+    };
 
-		updateMapTracker();
+    window.rightClickPrize = function(n) {
+        changePrize(n, -1)
     };
 
 	window.set_prize = function(n, value) {
@@ -1459,15 +1476,7 @@
 		updateMapTracker();
 	};
 	
-    window.rightClickPrize = function(n) {
-		var mindungeon = (flags.wildmaps ? 5 : 4);
-		document.getElementById('dungeonPrize'+n).classList.remove('prize-' + prizes[n]);
-        prizes[n] -= 1;
-        if (prizes[n] === -1) prizes[n] = mindungeon;
 
-        document.getElementById('dungeonPrize'+n).classList.add('prize-' + prizes[n]);
-		updateMapTracker();
-    };	
 
 	window.collect_prize = function(n) {
 		if (document.getElementById('dungeonPrize'+n).classList.contains('collected')) {
@@ -3829,7 +3838,7 @@
 		
 		//Default the dungeon prizes and enemizer defaults
         for (var k = 0; k < dungeons.length; k++) {
-            prizes[k] = 0;
+            prizes[k] = 3;
 			if (flags.bossshuffle === 'N') {
 				enemizer[k] = k + 1;
 			} else {
