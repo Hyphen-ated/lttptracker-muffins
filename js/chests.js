@@ -3594,7 +3594,7 @@
 				caption: 'Hobo {flippers}',
 				is_opened: false,
 				is_available: function() {
-					return items.flippers ? 'available' : 'unavailable';
+					return items.flippers ? 'available' : 'darkavailable';
 				}
 			}, { // [71]
 				caption: 'Ether Tablet {sword2}{book}',
@@ -3819,8 +3819,12 @@
 				caption: 'Mad Batter {hammer}/{mirror} + {powder}',
 				is_opened: false,
 				is_available: function() {
-					return items.powder && (items.hammer || items.glove === 2 && items.mirror && items.moonpearl) ? 'available' : 'unavailable';
-				}
+                    if(items.hammer || items.glove === 2 && items.mirror && items.moonpearl) {
+                        if(items.powder) return 'available';
+                        if(items.mushroom && items.somaria) return 'darkavailable';
+                    }
+                    return 'unavailable';
+                }
 			}, { // [101]
 				caption: 'Take the frog home {mirror} / Save+Quit',
 				is_opened: false,
@@ -3867,8 +3871,12 @@
 				caption: 'Waterfall of Wishing (2) {flippers}',
 				is_opened: false,
 				is_available: function() {
-					return items.flippers ? 'available' : 'unavailable';
-				}
+                    if(items.flippers)
+                        return 'available';
+                    if(items.boots || items.moonpearl)
+                        return 'darkavailable';
+                    return 'unavailable';
+                }
 			}, { // [106]
 				caption: 'Castle Tower',
 				is_opened: false,

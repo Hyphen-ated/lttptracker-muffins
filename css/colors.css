@@ -85,6 +85,7 @@
   background-color: var(--information-color);
 }
 .darkavailable {
+  border-color: #cccccc !important;
   background-color: var(--darkavailable-color);
 }
 .partialavailable {
